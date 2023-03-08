@@ -9,6 +9,27 @@ A customizable and easy-to-use line chart component for React Native using SVG.
 
 You can install `rn-svg-graph` using npm:
 
+```bash
+npm install rn-svg-graph
+```
+
+or using yarn:
+
+```bash
+yarn add rn-svg-graph
+```
+
+## install react-native-svg
+
+```bash
+npm install react-native-svg
+```
+
+or using yarn:
+
+```bash
+yarn add react-native-svg
+```
 
 ## Usage
 

@@ -1,6 +1,6 @@
 {
   "name": "rn-svg-graph",
-  "version": "1.0.1",
+  "version": "1.0.1.1",
   "description": "A React Native library for creating line charts using SVG",
   "main": "index.js",
   "module": "src/index.ts",
