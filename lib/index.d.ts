@@ -1,3 +1,3 @@
 
-import LineChart from "./svgChart/SvgChart";
+import LineChart from "./svgChart/LineChart";
 export default LineChart;

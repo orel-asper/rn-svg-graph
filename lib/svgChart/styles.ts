@@ -2,7 +2,9 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    container: {},
+    container: {
+        backgroundColor: 'white', // add your styles here
+    },
     chartLine: {
         strokeWidth: 2,
         fill: 'none',
@@ -13,7 +15,6 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
-        textAnchor: 'middle',
     },
     dataPoint: {
         width: 10,

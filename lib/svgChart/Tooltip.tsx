@@ -1,14 +1,37 @@
 //@ts-nocheck
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text, G, Rect } from 'react-native-svg';
 import { TooltipProps } from './types';
-import styles from './styles';
 
-const Tooltip: React.FC<TooltipProps> = ({ x, y, value }) => {
+const Tooltip = <T extends number>({ x, y, data, color, width, height }: TooltipProps<T> & { width: number, height: number }) => {
+    const padding = 10;
+    const fontSize = 12;
+
+    const tooltipX = x + padding;
+    const tooltipY = y - padding - height;
+
     return (
-        <View style={[styles.containerTooltip, { left: x, top: y }]}>
-            <Text style={styles.textTooltip}>{value}</Text>
-        </View>
+        <G opacity={1} transitionOpacity={true} duration={500}>
+            <Rect
+                x={x}
+                y={y}
+                rx={5}
+                ry={5}
+                width={width / 2}
+                height={height / 2}
+                fill={color}
+                fillOpacity="0.8"
+            />
+            <Text
+                x={tooltipX + padding}
+                y={tooltipY + padding + fontSize}
+                fontSize={fontSize}
+                fill="#fff"
+                textAnchor="start"
+            >
+                {data.tooltipLabel}
+            </Text>
+        </G>
     );
 };
 
